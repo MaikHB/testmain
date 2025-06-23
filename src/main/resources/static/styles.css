@@ -1,0 +1,82 @@
+body {
+    background-color: #f8f9fa;
+}
+.main-container {
+    display: flex;
+    min-height: 100vh;
+}
+.left-panel {
+    flex: 1;
+    padding: 20px;
+    background-color: white;
+    border-right: 1px solid #dee2e6;
+}
+.right-panel {
+    flex: 1;
+    padding: 20px;
+    background-color: #f8f9fa;
+}
+.section-title {
+    color: #0d6efd;
+    border-bottom: 2px solid #0d6efd;
+    padding-bottom: 8px;
+    margin-bottom: 20px;
+}
+.flight-card {
+    border: 1px solid #dee2e6;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 15px;
+    background-color: white;
+    transition: all 0.3s;
+}
+.flight-card:hover {
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+.flight-card.selected {
+    border: 2px solid #0d6efd;
+    background-color: #f8faff;
+}
+.reservation-card {
+    border: 1px solid #dee2e6;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 15px;
+    background-color: white;
+}
+.reservation-card.cancelled {
+    opacity: 0.6;
+    background-color: #f8f9fa;
+}
+.filter-section {
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+.clear-filters {
+    cursor: pointer;
+    color: #0d6efd;
+    text-decoration: underline;
+}
+@media (max-width: 768px) {
+    .main-container {
+        flex-direction: column;
+    }
+    .left-panel {
+        border-right: none;
+        border-bottom: 1px solid #dee2e6;
+    }
+}
+.loading {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 3px solid rgba(0,0,0,.3);
+    border-radius: 50%;
+    border-top-color: #0d6efd;
+    animation: spin 1s ease-in-out infinite;
+}
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
