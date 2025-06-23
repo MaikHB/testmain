@@ -3,7 +3,9 @@ name: Java CI and Docker Publish
 on:
   push:
     branches: [ "main" ]
-
+  pull_request:
+    branches: [ "main" ]
+  workflow_dispatch:  # <-- ¡Esto habilita el botón para hacer el push manual!
 env:
   APP_NAME: "testmain"
   JAR_NAME: "app.jar"
