@@ -3,6 +3,7 @@ name: Java CI and Docker Publish
 on:
   push:
     branches: [ "main" ]
+  workflow_dispatch:  # <-- ¡Esto habilita el botón para git accion !
 
 env:
   APP_NAME: "testmain"
