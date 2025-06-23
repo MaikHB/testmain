@@ -3,9 +3,14 @@ name: Java CI and Docker Publish
 on:
   push:
     branches: [ "main" ]
+<<<<<<< HEAD
   pull_request:
     branches: [ "main" ]
   workflow_dispatch:  # <-- ¡Esto habilita el botón para hacer el push manual!
+=======
+  workflow_dispatch:  # <-- ¡Esto habilita el botón para git accion !
+
+>>>>>>> f07a704d6531784a23263cb43e6207794ef484e1
 env:
   APP_NAME: "testmain"
   JAR_NAME: "app.jar"
